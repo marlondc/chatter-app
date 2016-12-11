@@ -22,9 +22,9 @@ io.on('connection', function(socket) {
   socket.on('disconnect', function() {
     console.log('a user has disconnected');
   });
-  socket.on('chat message', function(msg) {
-    io.emit('chat message', msg);
-  });
+  socket.on('new message', function(msg) {
+    io.emit('chat message', msg)
+  })
 });
 
 // uncomment after placing your favicon in /public

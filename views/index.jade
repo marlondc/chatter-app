@@ -3,5 +3,14 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  ul(id='messages')
+  div(class='navbar navbar-default navbar-fixed-bottom')
+    .container-fluid
+      div(class='navbar-form' id='form' onsubmit='return false')
+        form
+          .col-xs-10
+            input(type='text' id='new-message' class='form-control' placeholder='chat' autocomplete='off')
+          input(type='submit' class='btn col-xs-2' id='send-button' onclick='sendFunction()' value='Send')
   script(src='socket.io/socket.io.js')
   script(src='/javascripts/chat.js')
+  script(src='//code.jquery.com/jquery-1.11.3.min.js')
