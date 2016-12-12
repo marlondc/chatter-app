@@ -23,6 +23,7 @@ io.on('connection', function(socket) {
     console.log('a user has disconnected');
   });
   socket.on('new message', function(msg) {
+    console.log(msg);
     io.emit('chat message', msg)
   })
 });
