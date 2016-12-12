@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -16,6 +17,13 @@ var io = require('socket.io').listen(server)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+mongoose.connect('mongodb:localhost/chatter-development', function(req, err) {
+  if(err) {
+    console.log(err);
+  } else {
+    console.log('mongodb connected');
+  }
+})
 //sockets
 io.on('connection', function(socket) {
   console.log('a user is connected');
