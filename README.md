@@ -2,8 +2,8 @@
 
 ##### Introduction
 
-```This is a node chat web application using Socket.io. The basis of this is
-built from a collection of tutorials found online.```
+This is a node chat web application using Socket.io. The basis of this is
+built from a collection of tutorials found online.
 
 ##### Instructions
 
