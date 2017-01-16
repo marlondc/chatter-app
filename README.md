@@ -7,6 +7,6 @@ built from a collection of tutorials found online.```
 
 ##### Instructions
 
-```1. Install Node
-   2. npm install
-   3. visit localhost:3000```
+1. Install Node
+2. npm install
+3. visit localhost:3000
